@@ -18,7 +18,7 @@
 #define LCDIC2_LEFT         0b000
 #define LCDIC2_RIGHT        0b100
 
-class LCDIC2 {
+class LCDIC2 {  
   private:
     bool _backlight = true, _blink = false, _cursor = true, _display = true, _font = 0, _gain = true, _shift = false;
     uint8_t _address, _height = 0, _width = 0;
@@ -28,7 +28,7 @@ class LCDIC2 {
     bool send(uint8_t data, uint8_t rs = 0);
     uint8_t start(uint8_t y);
     bool wait(uint16_t us);
-    bool write(uint8_t data, uint8_t rs = 0);
+    virtual bool write(uint8_t data, uint8_t rs = 0);
 
   public:
     const bool backlight = _backlight, blink = _blink, cursor = _cursor, display = _display, font = _font, gain = _gain, shift = _shift;
@@ -48,6 +48,13 @@ class LCDIC2 {
     bool moveRight();
     bool printg(uint8_t glyph);
     uint8_t print(String data);
+    uint8_t print(int data);
+    uint8_t print(unsigned int data);
+    uint8_t print(float data);
+    uint8_t print(long data);
+    uint8_t print(unsigned long data);
+    uint8_t print(double data);
+    uint8_t print(const char data[]);
     bool rightToLeft();
     bool setBacklight(bool state);
     bool setBlink(bool state);
