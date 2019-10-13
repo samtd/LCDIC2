@@ -46,7 +46,7 @@ class LCDIC2 {
     bool leftToRight();
     bool moveLeft();
     bool moveRight();
-    bool print(uint8_t glyph);
+    bool printg(uint8_t glyph);
     uint8_t print(String data);
     bool rightToLeft();
     bool setBacklight(bool state);
