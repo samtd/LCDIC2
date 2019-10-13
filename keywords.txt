@@ -24,6 +24,7 @@ leftToRight	KEYWORD2
 moveLeft	KEYWORD2
 moveRight	KEYWORD2
 print	KEYWORD2
+printg	KEYWORD2
 rightToLeft	KEYWORD2
 setBacklight	KEYWORD2
 setBlink	KEYWORD2
