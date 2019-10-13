@@ -83,7 +83,7 @@ bool LCDIC2::moveRight() {
   return write(LCDIC2_MOVE | LCDIC2_SHIFT | LCDIC2_RIGHT);
 }
 
-bool LCDIC2::print(uint8_t glyph) {
+bool LCDIC2::printg(uint8_t glyph) {
   return write(glyph << _font, 0b1);
 }
 
