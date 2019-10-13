@@ -10,3 +10,5 @@ arduino nano
 esp8266 d1 mini
 
 LCD IC2 1602
+
+arduino samd - MKR Wifi 1010
